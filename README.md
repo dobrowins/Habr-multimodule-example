@@ -25,7 +25,7 @@ Gradle multi-module + git подмодули - в первый раз всегд
 Android Studio может заругаться на Unregistered git root - эту проблему можно решить через **Settings -> Version control**  
 ![unregistered git root](https://user-images.githubusercontent.com/18611797/41596717-de42d550-73d3-11e8-82bb-7b1c1b8e90ef.jpg)
 Теперь коммиты сделанных изменений будут пушится в соответствующие репозитории.
-![submodule_push](https://user-images.githubusercontent.com/18611797/41597277-a84b534e-73d5-11e8-9590-5d7e52215e17.jpg)
+![submodule_push](https://user-images.githubusercontent.com/18611797/41597277-a84b534e-73d5-11e8-9590-5d7e52215e17.jpg)  
 Для того, чтобы сделать клонированный в подмодуль код полноценным модулем нашего Android приложения требуется правка build.gradle файлов нашего корневого приложения:
 * в settings.gradle добавляем строчки   
 `include ':randomproviderlibrary`  
