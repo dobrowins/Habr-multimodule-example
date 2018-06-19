@@ -1,0 +1,3 @@
+[submodule "RandomProviderLibrary"]
+	path = RandomProviderLibrary
+	url = https://github.com/dobrowins/RandomProviderLibrary

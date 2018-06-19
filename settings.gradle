@@ -1,1 +1,3 @@
 include ':app'
+include ':randomproviderlibrary'
+project(':randomproviderlibrary').projectDir = file("/home/dobrovinskiy/StudioProjects/HabrMultimoduleExample/RandomProviderLibrary")
