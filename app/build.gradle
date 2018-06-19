@@ -1,0 +1,44 @@
+apply from: '../deps.gradle'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "dobrowins.com.habrmultimoduleexample"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+        }
+    }
+}
+
+kapt {
+    generateStubs = true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.kotlin.stdlib.jdk
+    implementation deps.android.support.appCompat
+    implementation deps.android.support.constraintLayout
+    implementation deps.dagger.runtime
+    kapt deps.dagger.compiler
+    kapt deps.dagger.androidCompiler
+
+    testImplementation deps.junit
+    androidTestImplementation deps.android.test.runner
+}
